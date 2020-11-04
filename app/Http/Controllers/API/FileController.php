@@ -36,7 +36,7 @@ class FileController extends Controller
             return response()->json([
                 "success" => true,
                 "message" => "File successfully uploaded",
-                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com/" . $file
+                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com" . $file
             ]);
 
         }
@@ -70,7 +70,7 @@ class FileController extends Controller
             return response()->json([
                 "success" => true,
                 "message" => "File successfully uploaded",
-                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com/" . $file
+                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com" . $file
             ]);
 
         }
@@ -136,7 +136,7 @@ class FileController extends Controller
             return response()->json([
                 "success" => true,
                 "message" => "File successfully uploaded",
-                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com/" . $file
+                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com" . $file
             ]);
 
         }
@@ -168,7 +168,7 @@ class FileController extends Controller
             return response()->json([
                 "success" => true,
                 "message" => "File successfully uploaded",
-                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com/" . $file
+                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com" . $file
             ]);
 
         }
