@@ -25,7 +25,7 @@ class FileController extends Controller
         if ($files = $request->file('file')) {
 
             //Store file to S3
-            $file = Storage::disk('s3')->put('documents/', $request->file);
+            $file = Storage::disk('s3')->put('documents', $request->file);
 
             //Keep a Log of the stored file in the DB
             $storedfile = new StoredFiles();
@@ -36,7 +36,7 @@ class FileController extends Controller
             return response()->json([
                 "success" => true,
                 "message" => "File successfully uploaded",
-                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com" . $file
+                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com/" . $file
             ]);
 
         }
@@ -59,7 +59,7 @@ class FileController extends Controller
         if ($files = $request->file('file')) {
 
             //Store file to S3
-            $file = Storage::disk('s3')->put('images/', $request->file);
+            $file = Storage::disk('s3')->put('images', $request->file);
 
             //Keep a Log of the stored file in the DB
             $storedfile = new StoredFiles();
@@ -70,7 +70,7 @@ class FileController extends Controller
             return response()->json([
                 "success" => true,
                 "message" => "File successfully uploaded",
-                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com" . $file
+                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com/" . $file
             ]);
 
         }
@@ -92,7 +92,7 @@ class FileController extends Controller
         if ($files = $request->file('file')) {
 
             //Store file to S3
-            $file = Storage::disk('s3')->put('videos/', $request->file);
+            $file = Storage::disk('s3')->put('videos', $request->file);
 
             //Keep a Log of the stored file in the DB
             $storedfile = new StoredFiles();
@@ -125,7 +125,7 @@ class FileController extends Controller
         if ($files = $request->file('file')) {
 
             //Store file to S3
-            $file = Storage::disk('s3')->put('audio/', $request->file);
+            $file = Storage::disk('s3')->put('audio', $request->file);
 
             //Keep a Log of the stored file in the DB
             $storedfile = new StoredFiles();
@@ -136,7 +136,7 @@ class FileController extends Controller
             return response()->json([
                 "success" => true,
                 "message" => "File successfully uploaded",
-                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com" . $file
+                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com/" . $file
             ]);
 
         }
@@ -157,7 +157,7 @@ class FileController extends Controller
         if ($files = $request->file('file')) {
 
             //Store file to S3
-            $file = Storage::disk('s3')->put('others/', $request->file);
+            $file = Storage::disk('s3')->put('others', $request->file);
 
             //Keep a Log of the stored file in the DB
             $storedfile = new StoredFiles();
@@ -168,7 +168,7 @@ class FileController extends Controller
             return response()->json([
                 "success" => true,
                 "message" => "File successfully uploaded",
-                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com" . $file
+                "file" => "https://ibialfiles.s3-us-west-2.amazonaws.com/" . $file
             ]);
 
         }
